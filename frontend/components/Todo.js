@@ -1,11 +1,16 @@
 import React from 'react'
 
-export default class Todo extends React.Component {
-  render() {
-    return (
-      <div>
-        Todo
-      </div>
-    )
-  }
+const Todo = props => {
+  return (
+    <div>
+      {props.todos.map(item=>{
+        console.log(item)
+        return (
+          <p key={item.id}>{item.name}</p>
+        )
+      })}
+    </div>
+  )
 }
+
+export default Todo;

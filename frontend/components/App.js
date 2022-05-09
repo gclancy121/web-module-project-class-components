@@ -1,15 +1,40 @@
 import React from 'react'
+import TodoList from './TodoList';
 
-export default class App extends React.Component {
+
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      todos: [
+          {
+            name: 'Organize Garage',
+            id: 1528817077286, // could look different, you could use a timestamp to generate it
+            completed: false
+          },
+          {
+            name: 'Bake Cookies',
+            id: 1528817084358,
+            completed: false
+          },
+          {
+            name: 'Play Deep Rock Galactic',
+            id: 548430,
+            completed: false
+
+          }
+        ]
+      }
+  
+
+
+    }
+
   render() {
     return (
       <div>
         <h1>Todo App</h1>
-        <ul>
-          <li>Walk dog</li>
-          <li>Get better at coding</li>
-          <li>Be happy</li>
-        </ul>
+        <TodoList todos = {this.state.todos} />
 
       <form>
         <input />
@@ -21,3 +46,4 @@ export default class App extends React.Component {
     )
   }
 }
+export default App;
