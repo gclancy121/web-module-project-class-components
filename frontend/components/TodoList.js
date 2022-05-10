@@ -5,7 +5,7 @@ import Todo from './Todo'
 const TodoList = props => {
   return (
     <div>
-      <Todo todos={props.todos}/>
+      <Todo todos={props.todos} toggleCompleted={props.toggleCompleted} />
     </div>
   )
 }
